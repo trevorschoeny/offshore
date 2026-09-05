@@ -1,0 +1,1 @@
+First release. Let a mob out of a boat with a shift-click, keep your held item in view while rowing, step up ledges, tow an empty boat without a lead, ferry a horse, watch the hull's health, and stop drifting when you hop out.

@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════════════════════════
 // Offshore — boats made less brittle. Universal Fabric mod (environment "*"):
-// eject, step up, move, horses and no-drift are server-side entity logic (in
+// eject, step up, horses and no-drift are server-side entity logic (in
 // single-player the integrated server carries them); held-item view and the
 // health HUD are client-only. Depends on MenuKit (HUD bar) only; nothing here
 // touches slots, so no MenuKit: Containers.

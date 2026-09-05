@@ -30,14 +30,11 @@ public final class OffshoreConfigScreen {
                         + "rowing still blocks attacking and using items as in vanilla."));
         group.option(toggle("stepUp", "Step up",
                 "A boat moving into a one-block rise (slab, stair, block edge) steps up instead of stopping." + SERVER));
-        group.option(toggle("moveBoats", "Move boats",
-                "Shift-right-click an empty boat with an empty hand to tow it behind you, no lead needed. "
-                        + "Shift-right-click it again to let go. Chest boats open their chest instead; use a lead." + SERVER));
         group.option(toggle("horsesInBoats", "Horses in boats",
                 "Horses, donkeys, mules, camels and llamas can ride a boat. A horse takes both seats, so tow the "
-                        + "boat with a lead or Move boats." + SERVER));
+                        + "boat with a lead." + SERVER));
         group.option(toggle("boatHealthHud", "Boat health HUD",
-                "Show the hull's remaining health above the hotbar while riding."));
+                "Show the hull's remaining health above the hotbar while riding. Off by default."));
         group.option(toggle("noDrift", "No drift on dismount",
                 "The boat stops where you leave it instead of sliding on." + SERVER));
 
@@ -57,7 +54,7 @@ public final class OffshoreConfigScreen {
         return Option.<Boolean>createBuilder()
                 .name(Component.literal(name))
                 .description(OptionDescription.of(Component.literal(description)))
-                .binding(true, () -> OffshoreConfig.get(key), v -> OffshoreConfig.set(key, v))
+                .binding(OffshoreConfig.DEFAULTS.get(key), () -> OffshoreConfig.get(key), v -> OffshoreConfig.set(key, v))
                 .controller(BooleanControllerBuilder::create)
                 .build();
     }

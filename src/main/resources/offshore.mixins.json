@@ -4,7 +4,8 @@
   "package": "com.trevorschoeny.offshore.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
-    "AbstractBoatMixin"
+    "AbstractBoatMixin",
+    "EntityStepFromWaterMixin"
   ],
   "client": [
     "ItemInHandRendererMixin"

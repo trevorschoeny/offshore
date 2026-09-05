@@ -94,7 +94,7 @@ processResources {
 // the project id here. Only Lead runs these tasks.
 modrinth {
     token = System.getenv("MODRINTH_TOKEN")
-    projectId = "TODO-lead-fills-in"
+    projectId = "j95WJfAv"
     versionNumber = property('offshore_version')
     versionName = "Offshore ${property('offshore_version')}"
     versionType = "release"

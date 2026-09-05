@@ -1,1 +1,1 @@
-First release. Let a mob out of a boat with a shift-click, keep your held item in view while rowing, step up ledges and shores, ferry a horse, and stop drifting when you hop out. A hull health bar is there too, off by default.
+Built against MenuKit 3.0.0. Requires MenuKit 3.0.0 or newer. No feature changes.

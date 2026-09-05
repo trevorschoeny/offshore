@@ -34,12 +34,15 @@ public final class OffshoreConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     // One map, key = JSON key. Keeps load/save to a loop instead of a field per switch.
+    // DEFAULTS is what the config screen resets to; SWITCHES is the live state.
+    static final Map<String, Boolean> DEFAULTS = new LinkedHashMap<>();
     private static final Map<String, Boolean> SWITCHES = new LinkedHashMap<>();
     static {
-        for (String k : new String[] {
-                "eject", "heldItemView", "stepUp", "moveBoats", "horsesInBoats", "boatHealthHud", "noDrift"}) {
-            SWITCHES.put(k, true);
+        for (String k : new String[] {"eject", "heldItemView", "stepUp", "horsesInBoats", "noDrift"}) {
+            DEFAULTS.put(k, true);
         }
+        DEFAULTS.put("boatHealthHud", false);   // opt-in: it is extra HUD, and vanilla has none for boats
+        SWITCHES.putAll(DEFAULTS);
     }
 
     private static boolean loaded = false;
@@ -91,11 +94,9 @@ public final class OffshoreConfig {
     public static boolean heldItemView()  { return get("heldItemView"); }
     // Boats climb one-block rises instead of stopping.
     public static boolean stepUp()        { return get("stepUp"); }
-    // Shift-right-click an empty boat, empty-handed, to tow it; again to let go.
-    public static boolean moveBoats()     { return get("moveBoats"); }
     // Horses and their kin can ride a boat, taking both seats.
     public static boolean horsesInBoats() { return get("horsesInBoats"); }
-    // Hull health bar while riding.
+    // Hull health bar while riding. Off by default.
     public static boolean boatHealthHud() { return get("boatHealthHud"); }
     // The boat stops where you leave it.
     public static boolean noDrift()       { return get("noDrift"); }

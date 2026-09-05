@@ -23,11 +23,11 @@ public final class BoatHealth {
 
     // VehicleEntity destroys the boat when getDamage() > 40.
     private static final float BREAK_AT = 40.0f;
-    private static final int WIDTH = 91;   // half a hotbar, sits over the hunger side
+    private static final int WIDTH = 182;   // the full hotbar width
 
     public static void register() {
         MKHudPanel.builder("offshore:boat-health")
-                .anchor(MKHudAnchor.BOTTOM_CENTER, 46, -50)   // right half above the hotbar, where vanilla draws mount health
+                .anchor(MKHudAnchor.BOTTOM_CENTER, 0, -50)   // spans the hotbar, just above it
                 .autoSize().padding(0)
                 .style(PanelStyle.NONE)
                 .hideInScreen()

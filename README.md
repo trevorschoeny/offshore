@@ -1,6 +1,6 @@
 # Offshore
 
-Offshore makes boats easier to live with. Vanilla boats are fine, but they have a pile of small paper cuts. You cannot get a mob out without breaking the boat. Your held item slides out of view when you row. A one-block step stops you dead, a horse will not fit, you cannot tell how close the hull is to breaking, and the boat slides off when you hop out. Offshore smooths those edges without changing what a boat is.
+Offshore fixes the small things that make vanilla boats a chore. You cannot get a mob out without breaking the boat. Your held item slides out of view when you row. A one-block step stops you dead, a horse will not fit, you cannot tell how close the hull is to breaking, and the boat slides off when you hop out. Offshore deals with all six and leaves the rest of vanilla boating as it is.
 
 ## Features
 

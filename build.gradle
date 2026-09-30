@@ -39,6 +39,11 @@ repositories {
     maven { url 'https://api.modrinth.com/maven' }
 }
 
+// MenuKit 6.0.0: its UI lives in a compile-enforced client source set. A project
+// dependency only sees the common half, so a consumer that draws with MenuKit's
+// UI (the hull bar) also needs the client output, next to the dependency below.
+evaluationDependsOn(':menukit')
+
 dependencies {
     // 26.x: the game is unobfuscated — no mappings line; mod deps use the
     // standard java configurations.
@@ -56,8 +61,9 @@ dependencies {
     implementation "maven.modrinth:yacl:3.9.6+26.2-fabric"
     include        "maven.modrinth:yacl:3.9.6+26.2-fabric"
 
-    // MenuKit — the boat health bar renders through MKHudPanel.
+    // MenuKit — the boat health bar renders through HudPanel.
     implementation project(':menukit')
+    implementation rootProject.project(':menukit').sourceSets.client.output
 }
 
 loom {

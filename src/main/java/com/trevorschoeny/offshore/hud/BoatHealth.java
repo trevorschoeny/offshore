@@ -1,9 +1,9 @@
 package com.trevorschoeny.offshore.hud;
 
 import com.trevorschoeny.offshore.config.OffshoreConfig;
-import com.trevlar.menukit.core.PanelStyle;
-import com.trevlar.menukit.hud.MKHudAnchor;
-import com.trevlar.menukit.hud.MKHudPanel;
+import com.trevlar.menukit.api.panel.InsideRegion;
+import com.trevlar.menukit.api.panel.PanelStyle;
+import com.trevlar.menukit.api.hud.HudPanel;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -26,12 +26,13 @@ public final class BoatHealth {
     private static final int WIDTH = 182;   // the full hotbar width
 
     public static void register() {
-        MKHudPanel.builder("offshore:boat-health")
-                .anchor(MKHudAnchor.BOTTOM_CENTER, 0, -50)   // spans the hotbar, just above it
+        HudPanel.builder("offshore:boat-health")
+                .region(InsideRegion.BOTTOM_CENTER).offset(0, -46)   // spans the hotbar, just above it
                 .autoSize().padding(0)
                 .style(PanelStyle.NONE)
-                .hideInScreen()
-                .showWhen(BoatHealth::isActive)
+                // hideInScreen is gone; showing in screens is the 6.0.0 default, so the
+                // screen-open check that used to be implicit is now explicit here.
+                .visibleWhen(() -> Minecraft.getInstance().gui.screen() == null && isActive())
                 .bar(0, 0, WIDTH, 7)
                     .value(BoatHealth::health)
                     .color(0xFFC08040)   // plank brown

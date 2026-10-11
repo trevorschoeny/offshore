@@ -24,7 +24,7 @@ Fabric API and MenuKit are required. Install Offshore on both client and server.
 
 ## Compatibility
 
-Minecraft 26.2, Fabric. Universal mod. On a dedicated server the server's config decides whether the boat-side features are on. The held-item view and the hull bar are each player's own setting. Offshore hooks vanilla with narrow mixins, so other boat mods keep running. Boat Item View does the same held-item fix, and running both is fine.
+Minecraft 26.3, Fabric. Universal mod. On a dedicated server the server's config decides whether the boat-side features are on. The held-item view and the hull bar are each player's own setting. Offshore hooks vanilla with narrow mixins, so other boat mods keep running. Boat Item View does the same held-item fix, and running both is fine.
 
 ## License
 

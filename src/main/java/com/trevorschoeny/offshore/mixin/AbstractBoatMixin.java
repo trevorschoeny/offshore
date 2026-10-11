@@ -41,13 +41,11 @@ public abstract class AbstractBoatMixin extends VehicleEntity {
 
     private AbstractBoatMixin(EntityType<?> type, Level level) { super(type, level); }
 
-    // ── Step up ───────────────────────────────────────────────────────────
     @Override
     public float maxUpStep() {
         return OffshoreConfig.stepUp() ? 1.0f : super.maxUpStep();
     }
 
-    // ── No drift ──────────────────────────────────────────────────────────
     @Override
     protected void removePassenger(Entity passenger) {
         super.removePassenger(passenger);
@@ -57,7 +55,6 @@ public abstract class AbstractBoatMixin extends VehicleEntity {
         }
     }
 
-    // ── Horses ────────────────────────────────────────────────────────────
     @Inject(method = "hasEnoughSpaceFor", at = @At("HEAD"), cancellable = true)
     private void offshore$horsesFit(Entity entity, CallbackInfoReturnable<Boolean> cir) {
         if (OffshoreConfig.horsesInBoats() && entity instanceof AbstractHorse) cir.setReturnValue(true);

@@ -30,8 +30,8 @@ public final class BoatHealth {
                 .region(InsideRegion.BOTTOM_CENTER).offset(0, -46)   // spans the hotbar, just above it
                 .autoSize().padding(0)
                 .style(PanelStyle.NONE)
-                // hideInScreen is gone; showing in screens is the 6.0.0 default, so the
-                // screen-open check that used to be implicit is now explicit here.
+                // MenuKit 6.0.0 dropped hideInScreen and shows panels in screens by
+                // default, so the screen-open check is explicit here.
                 .visibleWhen(() -> Minecraft.getInstance().gui.screen() == null && isActive())
                 .bar(0, 0, WIDTH, 7)
                     .value(BoatHealth::health)

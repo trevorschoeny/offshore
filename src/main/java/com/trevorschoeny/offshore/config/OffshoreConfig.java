@@ -17,9 +17,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Offshore config: one switch per feature, all default on, no master switch
- * (plan.md). Same static-field + JSON shape as the other house mods;
- * persisted to {@code config/offshore/config.json}.
+ * Offshore config: one switch per feature, all default on, no master switch.
+ * Same static-field + JSON shape as the other house mods; persisted to
+ * {@code config/offshore/config.json}.
  *
  * <p>Server-side switches (eject, step up, move, horses, no drift) are read
  * where the boat ticks or is clicked, so on a dedicated server the server's

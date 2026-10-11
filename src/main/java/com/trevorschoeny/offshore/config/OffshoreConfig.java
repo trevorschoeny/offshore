@@ -21,7 +21,7 @@ import java.util.Map;
  * Same static-field + JSON shape as the other house mods; persisted to
  * {@code config/offshore/config.json}.
  *
- * <p>Server-side switches (eject, step up, move, horses, no drift) are read
+ * <p>Server-side switches (eject, step up, horses, no drift) are read
  * where the boat ticks or is clicked, so on a dedicated server the server's
  * file decides. Client-side switches (held-item view, health HUD) are per
  * player.

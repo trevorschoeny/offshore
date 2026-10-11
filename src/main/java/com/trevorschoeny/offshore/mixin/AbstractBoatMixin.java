@@ -34,7 +34,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * the hull ({@code hasEnoughSpaceFor}) and, once in, a second seat would still
  * be open. A horse passes the width check, and a boat carrying one reports a
  * single seat, so it fills the boat. That also means the player cannot board
- * with it; tow the boat instead (Move boats, or a lead).
+ * with it; tow the boat with a lead instead.
  */
 @Mixin(AbstractBoat.class)
 public abstract class AbstractBoatMixin extends VehicleEntity {

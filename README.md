@@ -4,19 +4,31 @@ Offshore fixes the small things that make vanilla boats a chore. You cannot get 
 
 ## Features
 
-Let a mob out. Shift-right-click a mob sitting in a boat and it climbs out beside the boat. Other players are never ejected. Aim at the mob, not the hull. A chest boat's hull still opens its chest on shift-click, the way it always has.
-
-See what you are holding. While rowing, your held item stays in view in first person instead of sliding out of frame. This is visual only. Rowing still blocks attacking and using items, as in vanilla.
-
-Step up ledges. A boat moving into a one-block rise (a slab, a stair, a block edge, the shore) steps up instead of stopping. It works from land, from ice, and from the water.
-
-Ferry a horse. Lead a horse, donkey, mule, camel or llama into a boat and it rides. The animal takes both seats, so tow the boat with a lead rather than rowing it.
-
-Watch the hull. A bar across the top of the hotbar shows how much of the boat is left while you ride. It is off by default. Switch it on in the config if you want it.
-
-Stop where you leave it. When you get out, the boat stops instead of sliding on.
-
 Each feature has its own switch under Mod Menu, Offshore.
+
+### Let a mob out
+
+Shift-right-click a mob sitting in a boat and it climbs out beside the boat. Other players are never ejected. Aim at the mob, not the hull. A chest boat's hull still opens its chest on shift-click, the way it always has.
+
+### See what you are holding
+
+While rowing, your held item stays in view in first person instead of sliding out of frame. This is visual only. Rowing still blocks attacking and using items, as in vanilla.
+
+### Step up ledges
+
+A boat moving into a one-block rise (a slab, a stair, a block edge, the shore) steps up instead of stopping. It works from land, from ice, and from the water.
+
+### Ferry a horse
+
+Lead a horse, donkey, mule, camel or llama into a boat and it rides. The animal takes both seats, so tow the boat with a lead rather than rowing it.
+
+### Watch the hull
+
+A bar across the top of the hotbar shows how much of the boat is left while you ride. It is off by default. Switch it on in the config if you want it.
+
+### Stop where you leave it
+
+When you get out, the boat stops instead of sliding on.
 
 ## Install
 
